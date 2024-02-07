@@ -22,87 +22,104 @@ Powyższy kod markdown wykorzystuje blok kodu do przedstawienia struktury projek
 
 ## Struktura Projektu
 
-DjangoQuotesV3
-
-- .gitattributes
-- notes
-  - manage.py
-  - media
-    - default_avatar.png
-    - profile_images
-      - download.png
-  - noteapp
-    - admin.py
-    - apps.py
-    - forms.py
-    - migrations
-      - 0001_initial.py
-      - 0002_remove_quote_author_remove_quote_user_note_user_and_more.py
-      - **init**.py
-    - models.py
-    - static
-      - noteapp
-        - styles.css
-    - templates
-      - noteapp
-        - base.html
-        - detail.html
-        - index.html
-        - note.html
-        - tag.html
-    - templatetags
-      - extract_tags.py
-    - tests.py
-    - urls.py
-    - views.py
-    - **init**.py
-  - notes
-    - asgi.py
-    - settings.py
-    - urls.py
-    - wsgi.py
-    - **init**.py
-  - quotes
-    - admin.py
-    - apps.py
-    - forms.py
-    - migrations
-      - 0001_initial.py
-      - **init**.py
-    - models.py
-    - templates
-      - quotes
-        - add_author.html
-        - add_quote.html
-        - author.html
-        - author_detail.html
-        - author_list.html
-        - index.html
-        - quote.html
-        - quote_detail.html
-        - quote_list.html
-    - tests.py
-    - urls.py
-    - views.py
-    - **init**.py
-  - users
-    - admin.py
-    - apps.py
-    - forms.py
-    - migrations
-      - 0001_initial.py
-      - **init**.py
-    - models.py
-    - signals.py
-    - templates
-      - users
-        - login.html
-        - profile.html
-        - signup.html
-    - tests.py
-    - urls.py
-    - views.py
-    - **init**.py
-- poetry.lock
-- pyproject.toml
-- README.md
+```
+DjangoQuotesV4
+├─ .gitattributes
+├─ notes
+│  ├─ data_baser.py
+│  ├─ manage.py
+│  ├─ media
+│  │  ├─ author_images
+│  │  │  ├─ 2565830.jpg
+│  │  │  ├─ 370279477_1076899290336339_2682171693873150376_n.jpg
+│  │  │  ├─ 3837194.jpg
+│  │  │  ├─ 4105635.jpg
+│  │  │  ├─ 419882478_1517151512416851_6516303177956484248_n.jpg
+│  │  │  ├─ 4TTR2YkP72hO2Gk26XKTma7O0v02FMpj.jpg
+│  │  │  └─ FB_IMG_1604499348697.jpg
+│  │  ├─ default_avatar.png
+│  │  └─ profile_images
+│  │     ├─ 370279477_1076899290336339_2682171693873150376_n.jpg
+│  │     ├─ 411221090_211111158707645_1322271260579833626_n.jpg
+│  │     ├─ download.png
+│  │     └─ MOHoPbHH0zs0eiZeIlfP8Ntvf9f7Q5KO.png
+│  ├─ noteapp
+│  │  ├─ admin.py
+│  │  ├─ apps.py
+│  │  ├─ forms.py
+│  │  ├─ migrations
+│  │  │  ├─ 0001_initial.py
+│  │  │  ├─ 0002_remove_quote_author_remove_quote_user_note_user_and_more.py
+│  │  │  ├─ 0003_tag_tags.py
+│  │  │  └─ __init__.py
+│  │  ├─ models.py
+│  │  ├─ static
+│  │  │  └─ noteapp
+│  │  │     ├─ modern-normalize.css
+│  │  │     └─ styles.css
+│  │  ├─ templates
+│  │  │  └─ noteapp
+│  │  │     ├─ base.html
+│  │  │     ├─ detail.html
+│  │  │     ├─ index.html
+│  │  │     ├─ note.html
+│  │  │     ├─ notes_by_tag.html
+│  │  │     └─ tag.html
+│  │  ├─ templatetags
+│  │  │  └─ extract_tags.py
+│  │  ├─ urls.py
+│  │  ├─ views.py
+│  │  └─ __init__.py
+│  ├─ notes
+│  │  ├─ asgi.py
+│  │  ├─ settings.py
+│  │  ├─ urls.py
+│  │  ├─ wsgi.py
+│  │  └─ __init__.py
+│  ├─ quotes
+│  │  ├─ admin.py
+│  │  ├─ apps.py
+│  │  ├─ forms.py
+│  │  ├─ migrations
+│  │  │  ├─ 0001_initial.py
+│  │  │  ├─ 0002_author_description_author_image.py
+│  │  │  ├─ 0003_tag_alter_author_description.py
+│  │  │  └─ __init__.py
+│  │  ├─ models.py
+│  │  ├─ templates
+│  │  │  └─ quotes
+│  │  │     ├─ add_author.html
+│  │  │     ├─ add_quote.html
+│  │  │     ├─ author.html
+│  │  │     ├─ author_detail.html
+│  │  │     ├─ quote.html
+│  │  │     └─ quote_detail.html
+│  │  ├─ urls.py
+│  │  ├─ views.py
+│  │  └─ __init__.py
+│  ├─ quotes.json
+│  ├─ scrapper.py
+│  ├─ sqlite3.db
+│  └─ users
+│     ├─ admin.py
+│     ├─ apps.py
+│     ├─ auths.py
+│     ├─ forms.py
+│     ├─ migrations
+│     │  ├─ 0001_initial.py
+│     │  └─ __init__.py
+│     ├─ models.py
+│     ├─ signals.py
+│     ├─ templates
+│     │  └─ users
+│     │     ├─ login.html
+│     │     ├─ profile.html
+│     │     └─ signup.html
+│     ├─ urls.py
+│     ├─ views.py
+│     └─ __init__.py
+├─ poetry.lock
+├─ pyproject.toml
+├─ quotes.json
+└─ README.md
+```
