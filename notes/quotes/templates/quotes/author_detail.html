@@ -1,0 +1,13 @@
+{% extends 'noteapp/base.html' %} {% block content %}
+<h2>{{ author.name }}</h2>
+<p>{{ author.description }}</p>
+
+{% if author.image %}
+<img src="{{ author.image.url }}" alt="{{ author.name }} Image" />
+{% endif %} {% if user.is_authenticated %}
+<ul>
+  <li>
+    <a href="{% url 'quotes:add_author' %}" role="button">Add New Author</a>
+  </li>
+</ul>
+{% endif %} {% endblock %}
