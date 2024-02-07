@@ -14,12 +14,6 @@ tutaj działa, jeszcze nad tym pracuję
 Top Ten Tags
 Ulubione Cytaty
 
-## Kontrybucje
-
-Czekamy na Twoje pull requesty!```
-
-Powyższy kod markdown wykorzystuje blok kodu do przedstawienia struktury projektu w formie drzewa. Dodatkowo, dodano sekcję "Instalacja" i "Kontrybucje" jako przykłady, które można dostosować do swoich potrzeb.
-
 ## Struktura Projektu
 
 ```
