@@ -4,8 +4,8 @@ tutaj działa, jeszcze nad tym pracuję
 
 ## Instalacja
 
-1. Sklonuj repozytorium: `git clone https://github.com/Camilleus/DjangoQuotesV3.git`
-2. Przejdź do folderu projektu: `cd DjangoQuotesV3`
+1. Sklonuj repozytorium: `git clone https://github.com/Camilleus/DjangoQuotesV4.git`
+2. Przejdź do folderu projektu: `cd DjangoQuotesV4`
 3. Zainstaluj zależności: `poetry install`
 4. Uruchom serwer: `poetry run python manage.py runserver`
 
