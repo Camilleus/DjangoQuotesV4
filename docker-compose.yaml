@@ -11,9 +11,9 @@ services:
   postgres:
     image: postgres:12
     environment:
-      POSTGRES_DB: rest_app
-      POSTGRES_USER: Camilleus
-      POSTGRES_PASSWORD: fghg1234
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -24,8 +24,8 @@ services:
   pgadmin:
     image: dpage/pgadmin4
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     ports:
       - "8080:80"
     networks:
